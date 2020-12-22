@@ -103,29 +103,29 @@ function addEngineer() {
     inquirer.prompt([
         {
             type: 'input',
-            name: 'managerId',
-            message: 'What is your manager\'s id?'
+            name: 'engineerId',
+            message: 'What is your engineer\'s id?'
         },
         {
             type: 'input',
-            name: 'managerName',
-            message: 'What is your manager\'s name?'
+            name: 'engineerName',
+            message: 'What is your engineer\'s name?'
         },
         {
             type: 'input',
-            name: 'managerEmail',
-            message: 'What is your manager\'s email?'
+            name: 'engineerEmail',
+            message: 'What is your engineer\'s email?'
         },
         {
             type: 'input',
-            name: 'managerOfficeNum',
-            message: 'What is your manager\'s office number?'
+            name: 'engineerOfficeNum',
+            message: 'What is your engineer\'s office number?'
         }
     ]).then(res => {
         
-        const manager = new Manager(res.managerId, res.managerEmail, res.managerName, res.managerOfficeNum);
+        const engineer = new Engineer(res.engineerId, res.engineerEmail, res.engineerName, res.engineerOfficeNum);
 
-        teamMembers.push(manager);
+        teamMembers.push(engineer);
 
         addTeamMembers();
     })
